@@ -1,2 +1,2 @@
-# js-template
-Template for JS Programs
+# canvas-template
+Template for <canvas> Programs
