@@ -10,15 +10,24 @@ cnv.height = 400;
 window.addEventListener("load", draw);
 
 function draw() {
-  ctx.fillStyle = "green";
-  ctx.fillRect(50, 100, 200, 80);
+  drawDoor(100, 100, "black" );
+  ctx.fillStyle = "blue";
+  ctx.fillRect(100, 110, 200, 80);
+}
 
+  function draw() {
+    drawDoor(200, 200, "yellow" );
+    ctx.fillStyle = "blue";
+    ctx.fillRect(100, 110, 200, 80);
+  }
+  {
   // Redraw
   requestAnimationFrame(draw);
 }
 
 function drawDoor(x, y, frameColor) {
-
+ctx.fillStyle = frameColor;
+ctx.fillRect(x, y, 60, 100);
 }
 
 // Define & Invoke a Function
@@ -27,28 +36,5 @@ function displayGreeting() {
 console.log("Hello");
 console.log("This is a function")
 }
-
-// DEFINE A FUNCTION
-
-// PARAMETERS ARE: name & timeOfDay
-function displayGreeting(name, timeOfDay) {
-  console.log('Hello ' + name + '.');
-  console.log('Have a good ' + timeOfDay + '!');
-}
-
-//INVOKE FUNCTION WITH DIFFERENT ARGUMENTS
-displayGreeting('Megan', 'Morning');
-// Arguments are 'Megan' & 'Morning'
-// -> Hello Megan. Have a good Morning!
-
-
-displayGreeting('Azra', 'Afternoon');
-// Arguments are 'Azra' & 'Afternoon'
-// -> Hello Azra. Have a good Afternoon!
-
-
-displayGreeting('Nathan', 'Night');
-// Arguments are 'Nathan' & 'Night'
-// -> Hello Nathan. Have a good Night!
 
 
